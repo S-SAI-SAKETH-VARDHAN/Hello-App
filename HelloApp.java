@@ -1,5 +1,12 @@
-public class Hello-App {
+public class HelloApp {
     public static void main(String[] args) {
-        System.out.println("Hello App");
+
+        // Check if argument is given
+        if(args.length > 0) {
+            System.out.println("Hello " + args[0]);
+        } 
+        else {
+            System.out.println("No command line argument given");
+        }
     }
 }
