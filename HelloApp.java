@@ -1,0 +1,15 @@
+public class HelloApp {
+    public static void main(String[] args) {
+
+        // Default name
+        String name = "World";
+
+        // Check if command-line argument is provided
+        if (args.length > 0) {
+            name = args[0];
+        }
+
+        // Display message
+        System.out.println("Hello, " + name + "!");
+    }
+}
