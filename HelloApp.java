@@ -1,15 +1,23 @@
 public class HelloApp {
     public static void main(String[] args) {
 
-        // Default name
-        String name = "World";
+        // If no arguments are passed
+        if (args.length == 0) {
+            System.out.println("Hello, World!");
+        } 
+        // If arguments are passed
+        else {
+            StringBuilder nameBuilder = new StringBuilder();
 
-        // Check if command-line argument is provided
-        if (args.length > 0) {
-            name = args[0];
+            for (int i = 0; i < args.length; i++) {
+                nameBuilder.append(args[i]);
+
+                if (i < args.length - 1) {
+                    nameBuilder.append(", ");
+                }
+            }
+
+            System.out.println("Hello, " + nameBuilder + "!");
         }
-
-        // Display message
-        System.out.println("Hello, " + name + "!");
     }
 }
